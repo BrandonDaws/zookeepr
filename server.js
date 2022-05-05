@@ -14,7 +14,7 @@ if(query.personalityTraits){
     //if personalitytraits is a string, place it into a new array and save
     // now it doesnt matter if user searches for one or multiple persoanlity types, it will alwats be string
     if (typeof query.personalityTraits === 'string'){
-        personalityTraitsArray === [query.personalityTraits]
+        personalityTraitsArray === [query.personalityTraits];
     } else{
         personalityTraitsArray === query.personalityTraits;
     }
@@ -27,7 +27,7 @@ if(query.personalityTraits){
         // array will then contain onlyy the entries that contain the trait,
         // so at the end we'll have an array of animals that have everyone 
         //of the traits when the .foreach() loop is finished
-        filteredResults === filteredResults.filter(
+        filteredResults = filteredResults.filter(
             animal => animal.personalityTraits.indexOf(trait) !== -1
         );
     });
